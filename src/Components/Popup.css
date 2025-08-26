@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #0f1115;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal {
+  background: #1a1d24;
+  padding: 2em;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+  animation: popIn 0.4s ease forwards;
+  transform: scale(0.8);
+  opacity: 0;
+}
+
+@keyframes popIn {
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.modal h2 {
+  margin: 0 0 0.5em;
+  font-size: 1.8em;
+  color: white;
+}
+
+.modal p {
+  font-size: 1.1em;
+  color: #ccc;
+}
+
+.modal button.close-btn {
+  margin-top: 1.5em;
+  padding: 0.7em 1.5em;
+  background: #ff4081;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.modal button.close-btn:hover {
+  background: #e73370;
+  transform: translateY(-2px);
+}
+
+.glow-ring {
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  border-radius: 50%;
+  top: -25%;
+  left: -25%;
+  background: radial-gradient(circle, #373738 0%, transparent 70%);
+  filter: blur(30px);
+  z-index: -1;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
