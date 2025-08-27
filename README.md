@@ -1,12 +1,11 @@
 # Form Site
 
 ## Description
-A responsive form application built with React. Features include form validation, interactive inputs, and a clean UI.
+Form application built with React. Features include form validation, interactive inputs, and a clean UI.
 
 ## Features
 - Multiple input types and form fields  
 - Basic validation for user inputs  
-- Responsive design for desktop and mobile  
 
 ## Tech Stack
 - React  
